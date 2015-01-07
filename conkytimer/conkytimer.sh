@@ -4,6 +4,9 @@
 # {$if_running conkytimer}${execpi 30 ~/.conkytimer}$endif
 # Start a task: conkytimer "<task description>" <min>
 
+# Clean ~/.conkytimer on SIGINT
+trap "rm ~/.conkytimer" INT
+
 task=$1
 min=$2
 
