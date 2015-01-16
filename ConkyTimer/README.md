@@ -1,14 +1,14 @@
-# conkytimer
+# conkyTimer
 
 ## Usage
 Add to `~/.conkyrc`:
 ```
-${execpi 30 ~/.conkytimer}
+${execpi 30 cat ~/.conkytimer}
 ```
 
 Start a task: 
 ```
-conkytimer "<task description>" <min>
+conkyTimer "<task description>" <min>
 ```
 
 ## Screenshot 
