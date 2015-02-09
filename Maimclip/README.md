@@ -10,5 +10,5 @@ screenshot to the clipboard for quick post-processing.
 * [copyq](https://github.com/hluk/CopyQ)
 
 # Installation
-Simply copy `scrotlip.sh` to a place somewhere on your path such as `/usr/local/bin`. Arch Linux users can install the script
-from the AUR using the [scrotclip](https://aur.archlinux.org/packages/scrotclip-git) package.
+Simply copy `maimclip.sh` to a place somewhere on your path such as `/usr/local/bin`. Arch Linux users can install the script
+from the AUR using the [maimclip](https://aur.archlinux.org/packages/maimclip-git) package.
