@@ -2,7 +2,11 @@
 
 Based on ["snippy"]((https://bbs.archlinux.org/viewtopic.php?id=71938)) by "sessy".
 
-You will also need "dmenu", "xsel" and "xdotool". Get them from your linux distribution in the usual way. 
+## Dependencies
+You will also need "dmenu" and "copyq". Get them from your Linux distribution in the usual way. 
+
+## Installation
+Place `snippy.sh` on your path.
 
 ## Usage
 

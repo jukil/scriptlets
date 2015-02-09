@@ -3,7 +3,7 @@
 # Based on "snippy" by "sessy" 
 # (https://bbs.archlinux.org/viewtopic.php?id=71938)
 #
-# You will also need "dmenu", "xsel" and "xdotool". Get them from your linux
+# You will also need "dmenu" and "copyq". Get them from your linux
 # distro in the usual way.
 #
 # To use:
@@ -26,8 +26,7 @@
 #      ((mod4Mask, xK_s), spawn "/path/to/snippy")
 #
 DIR=${HOME}/.snippy
-DMENU_ARGS="-fn inconsolata-12 -sb #d33682 -nb #FDF6E3 -nf #555555 -h 26"
-XSEL_ARGS="--clipboard --input"
+DMENU_ARGS="-b"
 
 cd ${DIR}
 
@@ -37,7 +36,10 @@ FILE=`find .  -type f | grep -v '^\.$' | sed 's!\.\/!!' | /usr/bin/dmenu ${DMENU
 
 if [ -f ${DIR}/${FILE} ]; then
   # Put the contents of the selected file into the paste buffer.
-  xsel ${XSEL_ARGS} < ${DIR}/${FILE}
+  copyq write text/plain - < ${DIR}/${FILE}
   # Paste into the current application.
-  xdotool key ctrl+v
+  copyq select 0
+  copyq paste
+  # Restore old clipboard content
+  copyq select 1
 fi
